@@ -1,0 +1,17 @@
+# Virtualenv
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm files
+.idea/
+
+# Project specific files
+*.iml
+*.iws
+
+# Environment configuration
+.env
