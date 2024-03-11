@@ -10,8 +10,8 @@
 }
 
 .container {
-    width: 35%;
-    background-color: #F7F8F7;
+    width: 37%;
+    background-color: #D19C8D;
     border-radius: 10px;
 }
 
@@ -20,12 +20,12 @@
 }
 
 .label-container {
-    width: 20%;
+    width: 30%;
 }
 
 .input-container {
     margin-left: 20px;
-    width: 65%;
+    width: 55%;
 }
 
 .line-container {
@@ -35,8 +35,8 @@
 
 .yellow-add {
     background-color: yellow;
-    color: white;
-    border: none;
+    color: #121413;
+    border: 2px solid yellow;
     padding: 10px;
     margin-top: 5px;
     border-radius: 7px;
@@ -53,4 +53,10 @@ p {
 
 button:hover {
     border: 2px solid black;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 }

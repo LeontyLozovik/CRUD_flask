@@ -1,0 +1,36 @@
+h2 {
+    margin-top: 0;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.container {
+    background-color: #E7CABE;
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.m5 {
+    margin: 10px;
+}
+
+.button {
+    padding: 5px;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 7px;
+    color: white;
+    margin-top: 10px;
+}
+
+.button:hover {
+    border: 2px solid black;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

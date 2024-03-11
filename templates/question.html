@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Question</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/question.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="quiz">
-        <h2>{{question}}</h2>
-        <form action="/question/">
-            {% for answer in answers %}
-                <div class="answer_row">
-                    <input type="radio" name="answer_input" id="radio{{loop.index}}" value="{{answer}}">
-                    <label for="radio{{loop.index}}">{{answer}}</label>
-                </div>
-            {% endfor %}
+    <div class="center">
+        <div class="container">
+            <h2>{{question}}</h2>
+            <form action="/question/">
+                {% for answer in answers %}
+                    <div class="answer_row m5">
+                        <input type="radio" name="answer_input" id="radio{{loop.index}}" value="{{answer}}">
+                        <label for="radio{{loop.index}}">{{answer}}</label>
+                    </div>
+                {% endfor %}
 
-            <input type="submit" value="Oтветить">
+                <input class="button" type="submit" value="Oтветить">
 
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>

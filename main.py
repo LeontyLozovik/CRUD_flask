@@ -19,22 +19,15 @@ with app.app_context():
     db_add_new_data()
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
-    #question = Question('1', '1', '2', '3', '4')
-    question = None
-    return render_template('update_question.html', question=question)
-
-
-# @app.route('/', methods=['POST', 'GET'])
-# def index():
-#     if request.method == 'GET':
-#         quizzes = Quiz.query.all()
-#         return render_template('start.html', quizzes=quizzes)
-#     else:
-#         session['quiz_id'] = request.form.get('quiz')
-#         session['question_number'] = 0
-#         return redirect(url_for('questions'))
+    if request.method == 'GET':
+        quizzes = Quiz.query.all()
+        return render_template('start.html', quizzes=quizzes)
+    else:
+        session['quiz_id'] = request.form.get('quiz')
+        session['question_number'] = 0
+        return redirect(url_for('questions'))
 
 
 @app.route('/admin/', methods=['POST', 'GET'])

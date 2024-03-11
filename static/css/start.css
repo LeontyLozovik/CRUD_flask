@@ -1,0 +1,55 @@
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+form {
+    background-color: #E7CABE;
+    width: 20%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m5 {
+    margin: 10px;
+}
+
+.t-center {
+    text-align: center
+}
+
+.b-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 7px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+input:hover {
+    border: 2px solid black;
+}
+
+select {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
