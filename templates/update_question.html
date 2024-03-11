@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update.css') }}">
+</head>
+<body>
+    <div class="modal">
+        <div class="container">
+            <p>Обновить вопрос</p>
+            <form action="/admin/update/{{question.id}}" method="post" class="form">
+                <input type="hidden" id="id" name="id" value="{{question.id}}">
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="question" class="label-container">Вопрос</label>
+                    </div>
+                    <input type="text" id="question" name="question" class="input-container" value="{{ question.question }}">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="answer" class="label-container">Правильный</label>
+                    </div>
+                    <input type="text" id="answer" name="answer" class="input-container" value="{{ question.answer }}">
+                </div>
+                <div class="line-container;">
+                    <div class="label-display">
+                        <label for="wrong1" class="label-container">Неправильный 1</label>
+                    </div>
+                    <input type="text" id="wrong1" name="wrong1" class="input-container" value="{{ question.wrong1 }}">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="wrong2" class="label-container">Неправильный 2</label>
+                    </div>
+                    <input type="text" id="wrong2" name="wrong2" class="input-container" value="{{ question.wrong2 }}">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="wrong3" class="label-container">Неправильный 3</label>
+                    </div>
+                    <input type="text" id="wrong3" name="wrong3" class="input-container" value="{{ question.wrong3 }}">
+                </div>
+                <button type="submit" class="yellow-add">Обновить</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

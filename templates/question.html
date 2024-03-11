@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question</title>
+</head>
+<body>
+    <div class="quiz">
+        <h2>{{question}}</h2>
+        <form action="/question/">
+            {% for answer in answers %}
+                <div class="answer_row">
+                    <input type="radio" name="answer_input" id="radio{{loop.index}}" value="{{answer}}">
+                    <label for="radio{{loop.index}}">{{answer}}</label>
+                </div>
+            {% endfor %}
+
+            <input type="submit" value="Oтветить">
+
+        </form>
+    </div>
+</body>
+</html>

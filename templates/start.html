@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <h2>Выберете квиз</h2>
+        <div>
+            <select name="quiz">
+                {% for q in quizzes %}
+                    <option value="{{q.id}}">{{q.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Начать КВИЗ">
+        </div>
+    </form>
+</body>
+</html>

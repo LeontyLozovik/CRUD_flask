@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        {% for question in list_of_questions %}
+        <div class="inside-container">
+            <div class="view_part block45">
+                {{question.question}}
+            </div>
+            <div class="view_part block10">
+                {{question.answer}}
+            </div>
+            <div class="view_part block10">
+                {{question.wrong1}}
+            </div>
+            <div class="view_part block10">
+                {{question.wrong2}}
+            </div>
+            <div class="view_part block10">
+                {{question.wrong3}}
+            </div>
+            <div class="view_part">
+                <div class="view_part block45">
+                    <button class="yellow" type="submit"><a href="/admin/update/{{question.id}}" class="no_decoration">Update</a></button>
+                </div>
+                <div class="view_part">
+                    <button type="submit" class="red"><a href="/admin/delete/{{question.id}}">Delete</a></button>
+                </div>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+    </div>
+    <button class="green"><a href="#openModal1" class="no_decoration">Добавить</a></button>
+
+
+
+
+
+
+
+    <div id="openModal1" class="modal">
+        <div class="container">
+            <div>
+                <a href="#close" class="close">&times;</a>
+            </div>
+            <p>Добавить вопрос</p>
+            <form action="/admin/" method="post" class="form">
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="question" class="label-container">Вопрос</label>
+                    </div>
+                    <input type="text" id="question" name="question" class="input-container">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="answer" class="label-container">Правильный</label>
+                    </div>
+                    <input type="text" id="answer" name="answer" class="input-container">
+                </div>
+                <div class="line-container;">
+                    <div class="label-display">
+                        <label for="wrong1" class="label-container">Неправильный 1</label>
+                    </div>
+                    <input type="text" id="wrong1" name="wrong1" class="input-container">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="wrong2" class="label-container">Неправильный 2</label>
+                    </div>
+                    <input type="text" id="wrong2" name="wrong2" class="input-container">
+                </div>
+                <div class="line-container">
+                    <div class="label-display">
+                        <label for="wrong3" class="label-container">Неправильный 3</label>
+                    </div>
+                    <input type="text" id="wrong3" name="wrong3" class="input-container">
+                </div>
+                <button type="submit" class="green-add">Добавить</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
